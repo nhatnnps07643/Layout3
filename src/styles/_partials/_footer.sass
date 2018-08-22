@@ -1,63 +1,68 @@
 footer
 	margin-top: 1rem
+	background: $footer
 	.footer-top
 		color: #fff
-		background: $footer
 		padding: 3rem 0 
 		.title
-			>div
-				padding: 0
 			p
 				padding-top: .2rem
 				margin: 0rem
-		.title-hidden
-			display: none
+				max-width: 75%
 		h5
 			color: #083e64
-			padding: .3rem 0
-		img 
-			max-width: 200px
-		.row
-			div
-				padding: 1rem 4rem
-		ul
-			li
-				padding-top: .2rem
-				a
-					color: #fff
-					i
-						color: lighten($tquoise,40%)
-						padding-right: .5rem
+			padding: .5rem 0 0 0rem
+		.list-link
+			ul
+				margin: 0
+				li
+					padding-top: .2rem
+					a
+						color: #fff
+						i
+							color: lighten($tquoise,40%)
+							padding-right: .5rem
 	.bottom-footer
 		background: darken($belize-hole, 20%)
-		padding: 2rem
+		padding: 1.5rem 0
 		p
-			text-align: center
 			margin: 0
+			color: #fff
 			font-size: 1rem
 			line-height: 2rem
-		.icon-footer
-			text-align: center
 			a
-				
+				color: #fff
+		.icon-footer
+			display: flex
+			justify-content: flex-end
+			a
 				margin: 0rem .3rem
 				width: 2rem
 				height: 2rem
-				background: darken($info, 20%)
+				background: darken($whites, 20%)
+				transition: .3s all ease-in-out
 				border-radius: 50%
 				display: inline-block
 				text-align: center
 				i
 					line-height: 2rem
 					text-align: center
-					color: #fff
+					color: $belize-hole
 					+fz(10px)
+				&:hover
+					background: $whites
 
-	+media-breakpoint-up(sm)
+	+media-breakpoint-down(sm)
 		.footer-top
+			max-width: 70%
 			.title-hidden
-				display: block
-		.icon-footer
-			display: flex
-			justify-content: flex-end
+				display: none
+			.list-link
+				h5
+					margin-top: 1rem
+		.bottom-footer
+			.text
+				text-align: center
+			.icon-footer
+				justify-content: center
 

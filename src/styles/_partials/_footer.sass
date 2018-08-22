@@ -1,16 +1,20 @@
 footer
 	margin-top: 1rem
-	.top-footer
+	.footer-top
+		color: #fff
 		background: $footer
 		padding: 3rem 0 
 		.title
+			>div
+				padding: 0
 			p
 				padding-top: .2rem
 				margin: 0rem
+		.title-hidden
+			display: none
 		h5
 			color: #083e64
 			padding: .3rem 0
-		color: #fff
 		img 
 			max-width: 200px
 		.row
@@ -48,9 +52,12 @@ footer
 					text-align: center
 					color: #fff
 					+fz(10px)
-		+media-breakpoint-up(sm)
-			p
-				text-align: left
-			.icon-footer
-				display: flex
-				justify-content: flex-end
+
+	+media-breakpoint-up(sm)
+		.footer-top
+			.title-hidden
+				display: block
+		.icon-footer
+			display: flex
+			justify-content: flex-end
+

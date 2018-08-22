@@ -1,0 +1,95 @@
+extends _layout/layout
+
+block variables
+	- var title = 'Home'
+	- var description = 'Description for home page'
+	- var bodyclass = 'home'
+
+block body
+	section.home-slide
+		.owl-carousel.owl-theme.owl-loaded
+			.owl-stage-outer
+				.owl-stage
+					.owl-item.item
+						.boximg
+							img(src="img/home_slide_1.png", alt="")
+						.title
+							.container
+								.row
+									.col-md-7
+										h1 Chúng tôi là FullStack Vietnam
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus reiciendis modi tenetur perspiciatis, architecto perferendis, aut mollitia nulla id 
+					.owl-item.item
+						.boximg
+							img(src="img/home_slide_1.png", alt="")
+						.title
+							.container
+								.row
+									.col-md-7
+										h1 Chúng tôi là FullStack Vietnam
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus reiciendis modi tenetur perspiciatis, architecto perferendis, aut mollitia nulla id 
+					.owl-item.item
+						.boximg
+							img(src="img/home_slide_1.png", alt="")
+						.title
+							.container
+								.row
+									.col-md-7
+										h1 Chúng tôi là FullStack Vietnam
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus reiciendis modi tenetur perspiciatis, architecto perferendis, aut mollitia nulla id 
+
+	section.home-new
+		.container
+			.row
+				.col.title
+					h2
+						span FullStack
+						|  chuyên nghiệp
+			.row
+				.col-md-4.items
+					a(href="#", title="title") 
+						figure
+							.boximg
+								i
+									.boximg.fa.fa-eye
+								img(	src="./img/home_new_1.png", alt="")
+							figcaption
+								h3 Trung tâm đào tạo IT chuyên nghiệp
+								time 22/6/2018
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt reiciendis, suscipit porro fugiat magni qui recusandae minima ab eveniet a? Molestias ipsam qui voluptate praesentium cum ullam nostrum incidunt atque!
+				.col-md-4.items
+					a(href="#", title="title") 
+						figure
+							.boximg
+								i.fa.fa-eye
+								img(src="./img/home_new_2.png", alt="")
+							figcaption
+								h3 Trung tâm đào tạo IT chuyên nghiệp
+								time 22/6/2018
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt reiciendis, suscipit porro fugiat magni qui recusandae minima ab eveniet a? Molestias ipsam qui voluptate praesentium cum ullam nostrum incidunt atque!
+				.col-md-4.items
+					a(href="#", title="title") 
+						figure
+							.boximg
+								i.fa.fa-eye
+								img(src="./img/home_new_3.png", alt="")
+							figcaption
+								h3 Trung tâm đào tạo IT chuyên nghiệp
+								time 22/6/2018
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt reiciendis, suscipit porro fugiat magni qui recusandae minima ab eveniet a? Molestias ipsam qui voluptate praesentium cum ullam nostrum incidunt atque!
+
+
+	section.home-client
+		.container
+			.row
+				.col
+					.owl-carousel.owl-theme.owl-loaded
+						.owl-stage-outer
+							.owl-stage.list-item
+								-for(var i = 1; i < 10; i++)
+									.owl-item.item
+										.boximg
+											img(src="img/home_icon_"+i+".png", alt="")
+
+
+

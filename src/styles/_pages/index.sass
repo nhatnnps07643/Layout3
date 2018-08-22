@@ -1,0 +1,164 @@
+body
+	font-family: Roboto
+
+.home-slide
+	.item
+		position: relative
+		img
+			// width: 102%
+		.title
+			margin-top: 1rem
+			color: #333
+			h1
+				text-align: center
+				text-shadow: 2px 2px 5px grba(0,0,0,.5)
+				+fz(2rem)
+			p
+				text-align: center
+		+media-breakpoint-up(sm)
+			.title
+				h1,
+				p
+					text-align: left
+				color: #fff
+				+pos(abs, 50% null null 10%)
+				transform: translateY(-50%)
+		+media-breakpoint-up(md)
+			.title
+				h1
+					+fz(3rem)
+				p
+					+fz(1.5rem)
+	// .owl-dots
+	// 	margin-bottom: 2rem
+
+.home-new
+	.title
+		h2
+			font-size: 2.5rem
+			position: relative
+			padding: 1rem 0
+			text-align: center
+			&:after
+				content: ''
+				display: block
+				height: 3px
+				width: 100px
+				background: $amethyst
+				+pos(abs, null null 0 50%)
+				transform: translateX(-50%)
+			span
+				display: block
+				color: $amethyst
+		+media-breakpoint-up(sm)
+			h2
+				span
+					display: inline
+	.items
+		a
+			text-decoration: none
+			figure
+				.boximg
+					border-radius: 10px
+					overflow: hidden
+					position: relative
+					img 
+						width: 100%
+						transition: .3s all ease-in-out
+						filter: grayscale(100%)
+					&:before
+						content: ''
+						display: block
+						position: absolute
+						height: 100%
+						width: 100%
+						background: rgba(0,0,0,0)
+						transition: .3s all ease-in-out
+						top: 100%
+						z-index: 7
+					&:after
+						content: ''
+						display: block
+						position: absolute
+						height: 100%
+						width: 100%
+						background: rgba(0,0,0,0)
+						transition: .3s all ease-in-out
+						top: -100%
+						z-index: 7
+					i
+						font-size: 3rem
+						color: #ffffff
+						+pos(abs, 50% null null 50%)
+						transform: translate(-50%,-50%)
+						z-index: 10
+						opacity: 0
+						transition: .5s all ease-in-out
+				figcaption
+					h3
+						transition: .3s all ease-in-out
+						font-size: 1rem
+						line-height: 1.3rem
+						margin: 0
+						color: #333
+						margin-top: 0.75rem
+					time
+						color: darken(#fff, 30%)
+						font-size: 0.85rem
+						line-height: .9rem
+					p
+						transition: .3s all ease-in-out
+						color: darken(#fff, 40%)
+						font-size: .9rem
+						line-height: 1.2rem
+						margin-top: .75rem
+						height: 1.2*3rem
+						overflow: hidden
+			&:hover,
+			&:active
+				figure
+					.boximg
+						&:before
+							background: rgba(0,0,0,.5)
+							top: 50%
+							
+						&:after
+							background: rgba(0,0,0,.5)
+							top: -50%
+					h3
+						color: #e655ff
+					p
+						color: #333
+					i 
+						opacity: 1
+					img 
+						transform: scale(1.2)
+						filter: grayscale(0%)
+
+.home-client
+	.list-item
+		margin-top: 2rem
+		.item
+			.boximg
+				padding: 2rem
+				img
+					width: 100%
+	.owl-dots
+		display: none
+	.owl-nav
+		button
+			display: inline-block
+			width: 2rem
+			height: 2rem
+			background: #fff
+			&:hover,
+			&:active 
+				background: $brown !important
+			span
+				font-size: 2rem
+				line-height: 2rem
+				font-weight: bold
+	+media-breakpoint-up(md)
+		.item
+			.boximg
+				padding: 2rem !important

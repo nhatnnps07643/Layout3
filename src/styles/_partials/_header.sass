@@ -1,0 +1,34 @@
+header
+	.navbar
+		+pad(null 0)
+	.navbar-brand
+		img 
+			max-height: 3rem
+	+media-breakpoint-up(md)
+		nav 
+			position: relative
+			.navbar-brand
+				img 
+					max-height: 2rem
+		.list-menu
+			width: 100%
+			display: flex
+			justify-content: flex-end
+			li
+				font-size: 1.2rem
+				position: relative
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					+pos(abs, -7px null null 0)
+					width: 100%
+					height: 4px
+					background: $amethyst
+					opacity: 0
+					transition: .3s ease-in-out
+
+				&:hover
+					&:after
+						opacity: 1
+						top: -5px

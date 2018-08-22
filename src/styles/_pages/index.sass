@@ -137,7 +137,6 @@ body
 
 .home-client
 	.list-item
-		margin-top: 2rem
 		.item
 			.boximg
 				padding: 2rem
@@ -146,14 +145,15 @@ body
 	.owl-dots
 		display: none
 	.owl-nav
-		button
+		button.owl-next,
+		button.owl-prev
 			display: inline-block
 			width: 2rem
 			height: 2rem
-			background: #fff
+			background: $basic 
 			&:hover,
 			&:active 
-				background: $brown !important
+				background: $brown
 			span
 				font-size: 2rem
 				line-height: 2rem
@@ -161,4 +161,13 @@ body
 	+media-breakpoint-up(md)
 		.item
 			.boximg
-				padding: 2rem !important
+				padding: 1px
+		.list-item
+			position: relative
+		.owl-nav
+			button.owl-next,
+				+pos(abs, 50% 0% null null)
+				transform: translate(100%, -50%)
+			button.owl-prev
+				+pos(abs, 50% null null 0)
+				transform: translate(-100%, -50%)

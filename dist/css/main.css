@@ -6366,7 +6366,7 @@ footer {
     footer .footer-top .title p {
       padding-top: .2rem;
       margin: 0rem;
-      max-width: 75%; }
+      max-width: 80%; }
     footer .footer-top h5 {
       color: #083e64;
       padding: .5rem 0 0 0rem; }
@@ -6411,6 +6411,8 @@ footer {
   @media (max-width: 767.98px) {
     footer .footer-top {
       max-width: 70%; }
+      footer .footer-top .title p {
+        max-width: 100%; }
       footer .footer-top .title-hidden {
         display: none; }
       footer .footer-top .list-link h5 {
